@@ -23,7 +23,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-bv-Hxi">
                                 <rect key="frame" x="0.0" y="291" width="375" height="100"/>
-                                <color key="backgroundColor" red="1" green="0.76435946737122495" blue="0.081375396728235905" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="qSd-Hf-OWD"/>
                                     <constraint firstAttribute="width" constant="375" id="zLb-AU-fOD"/>
@@ -165,7 +165,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player1 Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5g-SP-PiZ">
-                                <rect key="frame" x="0.0" y="548" width="69" height="21"/>
+                                <rect key="frame" x="15" y="548" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
@@ -179,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXQ-oO-6MH">
-                                <rect key="frame" x="0.0" y="565" width="69" height="102"/>
+                                <rect key="frame" x="15" y="565" width="69" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24870245489267018" green="1" blue="0.22677145362037598" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -194,23 +194,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18Z-3t-1zJ">
+                                <rect key="frame" x="-12.5" y="50" width="400" height="650"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="650" id="MGE-Sn-c3q"/>
+                                    <constraint firstAttribute="width" constant="400" id="vQS-gA-4Qz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56v-20-Eqd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fireworks" translatesAutoresizingMaskIntoConstraints="NO" id="84G-lT-JCA">
+                                <rect key="frame" x="15" y="77" width="335" height="570"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lIA-5k-i0r" firstAttribute="top" secondItem="NKA-IW-7IA" secondAttribute="bottom" id="1VQ-x8-7Fy"/>
                             <constraint firstItem="2wv-bv-Hxi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="49G-Ao-e3e"/>
+                            <constraint firstItem="18Z-3t-1zJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8vx-Pb-aiz"/>
                             <constraint firstItem="NKA-IW-7IA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="A8A-cg-ksC"/>
                             <constraint firstItem="lIA-5k-i0r" firstAttribute="centerX" secondItem="NKA-IW-7IA" secondAttribute="centerX" id="GZD-u9-bCe"/>
                             <constraint firstItem="2wv-bv-Hxi" firstAttribute="top" secondItem="lIA-5k-i0r" secondAttribute="bottom" constant="-2" id="VqB-ap-xeW"/>
                             <constraint firstItem="NKA-IW-7IA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lPW-0b-swk"/>
+                            <constraint firstItem="18Z-3t-1zJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="usu-wz-L3U"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="enterButton" destination="Jt8-IK-KVV" id="HHO-sd-oTJ"/>
+                        <outlet property="firework" destination="84G-lT-JCA" id="EVI-Vv-8pT"/>
                         <outlet property="player1Lives" destination="gXQ-oO-6MH" id="JS4-qb-FN3"/>
                         <outlet property="player2Lives" destination="nMj-JE-RdH" id="Q6N-3J-COh"/>
                         <outlet property="playerEntry" destination="lIA-5k-i0r" id="Nog-Bw-BXu"/>
                         <outlet property="playerEvaluation" destination="2wv-bv-Hxi" id="N1Q-JO-lw1"/>
                         <outlet property="questionLabel" destination="NKA-IW-7IA" id="Wer-cx-c4i"/>
+                        <outlet property="resetButton" destination="18Z-3t-1zJ" id="swR-8g-pcz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -218,4 +238,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fireworks" width="2772" height="1847"/>
+    </resources>
 </document>

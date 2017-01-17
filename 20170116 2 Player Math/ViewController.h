@@ -16,7 +16,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *playerEvaluation;
 @property (weak, nonatomic) IBOutlet UILabel *player1Lives;
 @property (weak, nonatomic) IBOutlet UILabel *player2Lives;
+@property (weak, nonatomic) IBOutlet UIButton *enterButton;
+@property (weak, nonatomic) IBOutlet UIImageView *firework;
+@property (weak, nonatomic) IBOutlet UIButton *resetButton;
 - (IBAction)pushButton:(UIButton *)sender;
 - (IBAction)pushEnter:(UIButton *)sender;
+- (IBAction)resetGame:(UIButton *)sender;
 @end
 
